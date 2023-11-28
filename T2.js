@@ -3,7 +3,7 @@ const axios = require("axios");
 const appid = "ef0b0973b783e0614ac87612ec04344b";       // Definindo a chave de serviço com OpenWeather
 
 const units = "metric";                                 // Definindo unidade de medida
-const lang = "pt_BR";                                   // Definindo o idioma
+const lang = "pt_br";                                   // Definindo o idioma
 const limit = "1";                                      // Definindo o limite de cidades
 
 // Leitura do input do console
@@ -22,7 +22,7 @@ rl.question('Digite uma cidade: ', function (q) {
         .then((res) => {
             const data = res.data[0];
             // Definição de variaveis basicas
-            const name = data.name;
+            const name = data.local_names["pt"];
             const state = data.state;
             // Coleta da latitude e longitude
             const lat = data.lat;
