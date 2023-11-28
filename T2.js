@@ -1,5 +1,5 @@
-const readline = require("readline");
-const axios = require("axios");
+const readline = require("readline");                   // Definindo o READLINE
+const axios = require("axios");                         // Definindo o AXIOS
 const appid = "ef0b0973b783e0614ac87612ec04344b";       // Definindo a chave de serviço com OpenWeather
 
 const units = "metric";                                 // Definindo unidade de medida
@@ -20,6 +20,7 @@ rl.question('Digite uma cidade: ', function (q) {
     axios
         .get(url_lat_lon)
         .then((res) => {
+            // Coleta dos dados essenciais
             const data = res.data[0];
             // Definição de variaveis basicas
             const name = data.local_names["pt"];
